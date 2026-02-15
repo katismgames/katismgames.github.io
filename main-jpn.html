@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Katism Games</title>
+  <meta name="description" content="Katism Games — モバイルゲームスタジオ。プライバシーポリシー、利用規約、サポートリンク。" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #111b2e;
+      --text: #e8eefc;
+      --muted: #a7b4d6;
+      --line: rgba(255,255,255,0.10);
+      --btn: rgba(255,255,255,0.10);
+      --btnHover: rgba(255,255,255,0.16);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(80,140,255,0.25), transparent 55%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(255,170,80,0.18), transparent 50%),
+                  var(--bg);
+      color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 14px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(17,27,46,0.55);
+      backdrop-filter: blur(6px);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .brandText { min-width: 0; }
+    .brandText h1 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: 0.2px;
+    }
+    .brandText p {
+      margin: 2px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 52vw;
+    }
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .btn {
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--btn);
+      font-size: 13px;
+      line-height: 1;
+      transition: background 120ms ease;
+    }
+    .btn:hover { background: var(--btnHover); }
+    .hero {
+      margin-top: 18px;
+      padding: 22px 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(17,27,46,0.55);
+      backdrop-filter: blur(6px);
+    }
+    .hero h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (max-width: 820px) {
+      .grid { grid-template-columns: 1fr; }
+      .brandText p { max-width: 68vw; }
+    }
+    .card {
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(17,27,46,0.55);
+      backdrop-filter: blur(6px);
+      padding: 18px;
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 15px;
+      letter-spacing: 0.2px;
+    }
+    .muted { color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .links {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .linkRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.06);
+    }
+    .linkRow span { color: var(--muted); font-size: 12px; }
+    .pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.08);
+      font-size: 12px;
+    }
+
+    footer {
+      margin-top: 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 16px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <!-- ロゴファイルを assets/logo.png にアップロードすると自動的に表示されます -->
+          <img src="assets/logo.png" alt="Katism Games Logo" />
+        </div>
+        <div class="brandText">
+          <h1>Katism Games</h1>
+          <p>モバイルゲームスタジオ — 公式リンク＆サポート</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="btn" href="https://katismgames.github.io/privacy-policy/">プライバシーポリシー</a>
+        <a class="btn" href="https://katismgames.github.io/terms-of-use/">利用規約</a>
+        <a class="btn" href="https://katismgames.github.io/account-deletion/">アカウント削除</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>当社モバイルゲームの公式情報</h2>
+      <p>
+        本ページでは、Katism Gamesのゲーム運営に関する公式リンク（プライバシーポリシー、利用規約、アカウント削除のご案内、カスタマーサポート）を提供しています。
+        広告認証（app-ads.txt）目的の技術ファイルもドメインルートに保持されています。
+      </p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h3>ゲーム</h3>
+        <div class="links">
+          <a class="linkRow" href="https://play.google.com/store/apps/details?id=com.KatismGames.RandomHero.Android">
+            <div>
+              <strong>Random Hero Idle RPG (Android)</strong><br />
+            </div>
+            <div class="pill">開く</div>
+          </a>
+        </div>
+          <div class="links">
+          <a class="linkRow" href="https://apps.apple.com/app/id6756871686">
+            <div>
+              <strong>Random Hero Idle RPG (iOS)</strong><br />
+            </div>
+            <div class="pill">開く</div>
+          </a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>サポート</h3>
+        <p class="muted">
+          お問い合わせは、ストアに記載されている開発者連絡先をご確認ください。<br />
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      © <span id="y"></span> Katism Games. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
