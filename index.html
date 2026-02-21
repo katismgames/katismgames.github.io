@@ -10,13 +10,27 @@
             'ko': 'main-kor.html', // 한국어
             'en': 'main-eng.html', // 영어 (기본값)
             'ja': 'main-jpn.html', // 일본어
-            'zh': 'main-zho.html', // 중국어
+            'zh': 'main-zhs.html', // 중국어(간체)
+            'zht': 'main-zht.html', // 중국어(번체)
             'es': 'main-spa.html', // 스페인어
             'th': 'main-tha.html'  // 태국어
         };
 
-        const userLang = (navigator.language || navigator.userLanguage).substring(0, 2).toLowerCase();
-        const targetPage = languageMap[userLang] || languageMap['en'];
+        const fullLang = (navigator.language || navigator.userLanguage).toLowerCase();
+        const userLang = fullLang.substring(0, 2);
+
+        let targetPage;
+
+        // 중국어 간체/번체 구분
+        if (userLang === 'zh') {
+            if (fullLang.includes('tw') || fullLang.includes('hk') || fullLang.includes('mo')) {
+                targetPage = languageMap['zht']; // 번체
+            } else {
+                targetPage = languageMap['zh']; // 간체
+            }
+        } else {
+            targetPage = languageMap[userLang] || languageMap['en'];
+        }
 
         // 리다이렉션 수행
         window.location.replace(targetPage);
