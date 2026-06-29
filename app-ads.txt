@@ -137,3 +137,14 @@ lacunads.com, lcb555b3bc8667a09a, RESELLER
 lunamedia.io, 2fdb16a1-5025-4c41-9b17-e01e47ebc8b4, RESELLER, 524ecb396915caaf
 mars.media, 1010442, RESELLER
 thebrave.io, 1234634, RESELLER, c25b2154543746ac
+ironsource.com, 635323, DIRECT, f5e966444fae857c
+google.com, pub-4633719815049583, RESELLER, f08c47fec0942fa0
+rubiconproject.com, 11466, RESELLER, 0bfd66d529a55807
+pubmatic.com, 157297, RESELLER, 5d62403b186f2ace
+openx.com, 539665961, RESELLER, 6a698e2ec38604c6
+appnexus.com, 10200, RESELLER, f5ab79cb980f11d1
+indexexchange.com, 185012, RESELLER, 50b1c356f2c5c8fc
+smaato.com, 1100010899, RESELLER, 07bcf65f187117b4
+smartadserver.com, 2818, RESELLER, 060d053dcf45cbf3
+triplelift.com, 15555, RESELLER
+bidmachine.io, 2038, RESELLER
