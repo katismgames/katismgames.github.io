@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // 계정 탈퇴 안내 파일 이름 규칙에 맞춘 매핑
+        const languageMap = {
+            'ko': 'account_deletion_guide-kor.html', // 한국어
+            'en': 'account_deletion_guide-eng.html', // 영어 (기본값)
+            'ja': 'account_deletion_guide-jpn.html', // 일본어
+            'zh': 'account_deletion_guide-zhs.html', // 중국어(간체)
+            'zht': 'account_deletion_guide-zht.html', // 중국어(번체)
+            'es': 'account_deletion_guide-spa.html', // 스페인어
+            'th': 'account_deletion_guide-tha.html'  // 태국어
+        };
+
+        // 브라우저 언어 감지
+        const fullLang = (navigator.language || navigator.userLanguage).toLowerCase();
+        const userLang = fullLang.substring(0, 2);
+
+        let targetPage;
+
+        // 중국어 간체/번체 구분
+        if (userLang === 'zh') {
+            if (fullLang.includes('tw') || fullLang.includes('hk') || fullLang.includes('mo')) {
+                targetPage = languageMap['zht']; // 번체
+            } else {
+                targetPage = languageMap['zh']; // 간체
+            }
+        } else {
+            targetPage = languageMap[userLang] || languageMap['en'];
+        }
+
+        // 해당 언어 페이지로 이동
+        window.location.replace(targetPage);
+    </script>
+</head>
+<body>
+    <p>Redirecting to the account deletion guide... If it doesn't move, 
+       <a href="account_deletion_guide-eng.html">click here</a>.
+    </p>
+</body>
+</html>
